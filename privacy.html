@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — Zupi Indica Metrics</title>
+<style>
+  :root { --bg:#120820; --fg:#f4f0fa; --muted:#b9aed0; --accent:#3fd9c8; }
+  @media (prefers-color-scheme: light) {
+    :root { --bg:#faf8fc; --fg:#201434; --muted:#6a5c86; --accent:#1f9c8d; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font-family: system-ui, -apple-system, "Segoe UI", sans-serif; line-height: 1.6; }
+  main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+  a { color: var(--accent); }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.1rem; margin-top: 2em; }
+  p, li { color: var(--fg); }
+  table { width:100%; border-collapse: collapse; margin: 1em 0; font-size: .92rem; }
+  th, td { text-align:left; padding: 8px 10px; border-bottom: 1px solid color-mix(in srgb, var(--muted) 30%, transparent); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  .updated { color: var(--muted); font-size: .85rem; }
+  .back { display:inline-block; margin-bottom: 24px; color: var(--muted); text-decoration:none; font-size:.9rem; }
+  code { background: color-mix(in srgb, var(--accent) 12%, transparent); padding: 1px 6px; border-radius: 4px; font-size: .9em; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" href="index.html">&larr; voltar</a>
+  <h1>Política de Privacidade</h1>
+  <p class="updated">Última atualização: 20 de outubro de 2026</p>
+
+  <p>Esta política descreve exatamente quais dados o <strong>Zupi Indica Metrics</strong> acessa, como são usados e como são guardados. É uma ferramenta interna, usada apenas pela equipe da conta <strong>@zupiindica</strong> para acompanhar o desempenho de suas próprias publicações no TikTok e no Instagram — não é um serviço público.</p>
+
+  <h2>1. Dados acessados no TikTok</h2>
+  <p>Via login oficial do TikTok (OAuth), com as seguintes permissões (escopos) solicitadas:</p>
+  <table>
+    <tr><th>Escopo</th><th>O que permite ler</th></tr>
+    <tr><td><code>user.info.basic</code></td><td>ID interno, nome de exibição e avatar do perfil autorizado.</td></tr>
+    <tr><td><code>user.info.stats</code></td><td>Número de curtidas recebidas, seguidores, contas seguidas e quantidade de vídeos da conta.</td></tr>
+    <tr><td><code>video.list</code></td><td>Lista de vídeos públicos da conta e suas estatísticas (visualizações, curtidas, comentários, compartilhamentos).</td></tr>
+  </table>
+  <p>Nenhum escopo de publicação, exclusão ou edição de conteúdo é solicitado. A ferramenta não consegue postar, apagar ou alterar nada na conta.</p>
+
+  <h2>2. Dados acessados no Instagram</h2>
+  <p>Métricas de Reels (visualizações, curtidas, comentários, salvamentos, compartilhamentos e seguidores ganhos por publicação) são lidas manualmente pela própria equipe, através do painel "Ver insights" do Instagram, dentro da conta logada — isso não envolve uma API externa nem token armazenado desta integração.</p>
+
+  <h2>3. Onde e como os dados ficam guardados</h2>
+  <ul>
+    <li>O token de acesso (e token de atualização, se aplicável) concedido pelo TikTok é salvo <strong>localmente</strong>, em arquivo de configuração do projeto, fora de qualquer repositório público ou versionado em controle de versão.</li>
+    <li>Os tokens nunca são exibidos em telas, mensagens ou repositórios de código.</li>
+    <li>As métricas lidas (números de visualizações, curtidas etc.) são salvas em uma planilha local de acompanhamento, para uso exclusivamente interno da equipe Zupi Indica.</li>
+  </ul>
+
+  <h2>4. Retenção</h2>
+  <p>Os tokens são mantidos apenas enquanto a integração estiver ativa e em uso. Se o acesso for revogado pelo titular da conta, ou se a ferramenta for descontinuada, os tokens armazenados são apagados e deixam de ser utilizados.</p>
+
+  <h2>5. Compartilhamento com terceiros</h2>
+  <p>Nenhum dado lido por esta ferramenta é vendido, compartilhado ou usado para publicidade. Os dados servem unicamente para relatórios internos de desempenho da própria conta Zupi Indica.</p>
+
+  <h2>6. Como revogar o acesso</h2>
+  <p>O titular da conta TikTok pode revogar o acesso a qualquer momento em: Configurações do TikTok &rarr; Conta &rarr; Segurança e permissões &rarr; Aplicativos conectados. Após a revogação, a ferramenta perde imediatamente a capacidade de ler novos dados.</p>
+
+  <h2>7. Contato</h2>
+  <p>Dúvidas sobre esta política: <a href="mailto:prodbysantt@gmail.com">prodbysantt@gmail.com</a>.</p>
+</main>
+</body>
+</html>
